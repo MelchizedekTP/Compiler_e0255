@@ -29,8 +29,8 @@ cmake -S llvm -B build -G Ninja -DCMAKE_BUILD_TYPE=Release  -DLLVM_ENABLE_ASSERT
 ```
 To build on 14 cores
 ```
-ninja -C build -j 14
+ninja -C build -j 1
 ```
 ```
-ninja -C build check-llvm
+ninja -C build check-llvm -j 10
 ```
