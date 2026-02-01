@@ -23,11 +23,14 @@ To build LLVM
 ```
 cmake -S llvm -B build -G <generator> [options]
 ```
-For a release build with assertions enabled
+For a release build with assertions enabled and linking limited to max 1, set up config with this command
 ```
 cmake -S llvm -B build -G Ninja -DCMAKE_BUILD_TYPE=Release  -DLLVM_ENABLE_ASSERTIONS=ON -DLLVM_PARALLEL_LINK_JOBS=1 
 ```
-To run test on LLVM
+To build on 14 cores
+```
+ninja -C build -j 14
+```
 ```
 ninja -C build check-llvm
 ```
