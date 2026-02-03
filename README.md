@@ -20,6 +20,14 @@ To remove the ones already cluttering your local remote-tracking list, run:
 git fetch origin --prune
 ```
 To build LLVM
+
+Install dependencies 
+
+```
+sudo apt update
+sudo apt install build-essential ninja-build cmake
+
+```
 ```
 cmake -S llvm -B build -G <generator> [options]
 ```
